@@ -27,11 +27,13 @@ public class Player : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D feet)
     {
-        if (feet.gameObject.layer == 8)
-        {
-            onAir = false;
-            isJumping = false;
-        }
+        onAir = false;
+        isJumping = false;
+    }
+
+    private void OnTriggerExit2D(Collider2D feet)
+    {
+        onAir = true;
     }
 
     // Update is called once per frame
@@ -53,25 +55,25 @@ public class Player : MonoBehaviour
 
         if (movement > 0)
         {
-            if (!isJumping)
+            if (!isJumping && !onAir)
             {
-                //add walking animation
+                anim.SetInteger("transition", 1);
             }
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
 
         if (movement < 0)
         {
-            if (!isJumping)
+            if (!isJumping && !onAir)
             {
-                //add walking animation
+                anim.SetInteger("transition", 1);
             }
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
 
         if (movement == 0 && !onAir && !isJumping)
         {
-           //add idle animation 
+            anim.SetInteger("transition", 0);
         }
     }
 
@@ -81,20 +83,19 @@ public class Player : MonoBehaviour
         {
             if (!isJumping)
             {
-                //add jump animation
-                rig.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 isJumping = true;
+                anim.SetInteger("transition", 2);
+                rig.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+
                 doublejump = true;
             }
+            
         }
-        else
+        else if (Input.GetButtonDown("Jump") && doublejump)
         {
-            if (doublejump && onAir)
-            {
-                //add jump animation
-                rig.AddForce(new Vector2(0,jumpForce * 1), ForceMode2D.Impulse);
-                doublejump = false;
-            }
+            anim.SetInteger("transition", 2);
+            rig.AddForce(new Vector2(0, jumpForce * 1), ForceMode2D.Impulse);
+            doublejump = false;
         }
     }
 }
