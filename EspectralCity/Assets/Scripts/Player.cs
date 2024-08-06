@@ -84,8 +84,8 @@ public class Player : MonoBehaviour
             if (!isJumping)
             {
                 isJumping = true;
-                anim.SetInteger("transition", 2);
                 rig.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                anim.SetInteger("transition", 2);
 
                 doublejump = true;
             }
