@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 606138949}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,7 +205,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -296,8 +296,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e0fe32a3560aef42be078912edcbcff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  jumpForce: 5
+  speed: 10
+  jumpForce: 15
   onAir: 0
 --- !u!58 &606138948
 CircleCollider2D:
@@ -366,6 +366,7 @@ GameObject:
   - component: {fileID: 917720431}
   - component: {fileID: 917720430}
   - component: {fileID: 917720429}
+  - component: {fileID: 917720432}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -447,6 +448,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &917720432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917720428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 472a0d648f209b843af19af7de7832ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smooth: 0.5
 --- !u!1 &1694485523
 GameObject:
   m_ObjectHideFlags: 0
