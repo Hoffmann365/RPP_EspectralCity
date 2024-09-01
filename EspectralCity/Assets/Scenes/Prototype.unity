@@ -386,6 +386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e0fe32a3560aef42be078912edcbcff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentWeapon: 0
   speed: 10
   jumpForce: 15
   onAir: 0

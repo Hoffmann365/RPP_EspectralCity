@@ -3,8 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PlayerSkills
+{
+    melee,
+    ranged
+}
+
 public class Player : MonoBehaviour
 {
+    public PlayerSkills currentWeapon = PlayerSkills.melee;
     public float speed;
     public float jumpForce;
     public bool onAir;
@@ -40,6 +47,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         Jump();
+        WeaponSwitch();
     }
 
     void FixedUpdate()
@@ -98,4 +106,51 @@ public class Player : MonoBehaviour
             doublejump = false;
         }
     }
+
+    void WeaponSwitch()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if (currentWeapon == PlayerSkills.melee)
+            {
+                currentWeapon = PlayerSkills.ranged;
+            }
+            else if (currentWeapon == PlayerSkills.ranged)
+            {
+                currentWeapon = PlayerSkills.melee;
+            }
+        }
+    }
+
+    
+
+    /*
+     void Attack()
+    {
+        StartCoroutine("Atk");
+    }
+     
+     IEnumerator Atk()
+    {
+        if (currentWeapon == PlayerSkills.melee)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                //implementar atk melee
+            }
+        }
+        else if (currentWeapon == PlayerSkills.ranged)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                //implementar atk ranged
+            }
+        }
+    }
+
+    void EndAnimationATK()
+    {
+        //encerrar as animações de atk
+    }
+    */
 }
