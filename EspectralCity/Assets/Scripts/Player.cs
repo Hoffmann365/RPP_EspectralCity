@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     public static float movement;
     
     private bool isJumping;
+    private bool isAtk;
     private bool doublejump;
     
     private Rigidbody2D rig;
@@ -48,6 +49,7 @@ public class Player : MonoBehaviour
     {
         Jump();
         WeaponSwitch();
+        Attack();
     }
 
     void FixedUpdate()
@@ -79,9 +81,14 @@ public class Player : MonoBehaviour
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
 
-        if (movement == 0 && !onAir && !isJumping)
+        if (movement == 0 && !onAir && !isJumping && !isAtk)
         {
             anim.SetInteger("transition", 0);
+        }
+
+        if (isAtk == true && !onAir)
+        {
+            movement = 0;
         }
     }
 
@@ -124,7 +131,7 @@ public class Player : MonoBehaviour
 
     
 
-    /*
+    
      void Attack()
     {
         StartCoroutine("Atk");
@@ -136,21 +143,31 @@ public class Player : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                //implementar atk melee
+                isAtk = true;
+                anim.SetBool("meleeATK", true);
+                anim.SetInteger("transition", 3);
+                yield return new WaitForSeconds(2f);
+                isAtk = false;
             }
         }
         else if (currentWeapon == PlayerSkills.ranged)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                //implementar atk ranged
+                isAtk = true;
+                anim.SetBool("rangedATK", true);
+                anim.SetInteger("transition", 4);
+                yield return new WaitForSeconds(2f);
+                isAtk = false;
             }
         }
     }
 
     void EndAnimationATK()
     {
-        //encerrar as animações de atk
+        anim.SetBool("meleeATK", false);
+        anim.SetBool("rangedATK", false);
+        anim.SetInteger("transition", 0);
     }
-    */
+    
 }
