@@ -146,7 +146,7 @@ public class Player : MonoBehaviour
                 isAtk = true;
                 anim.SetBool("meleeATK", true);
                 anim.SetInteger("transition", 3);
-                yield return new WaitForSeconds(2f);
+                yield return new WaitForSeconds(0.5f);
                 isAtk = false;
             }
         }
