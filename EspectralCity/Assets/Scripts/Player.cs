@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
     public float speed;
     public float jumpForce;
     public bool onAir;
+    public GameObject bullet;
+    public Transform firePoint;
     
     public static float movement;
     
@@ -146,7 +148,7 @@ public class Player : MonoBehaviour
                 isAtk = true;
                 anim.SetBool("meleeATK", true);
                 anim.SetInteger("transition", 3);
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(0.2f);
                 isAtk = false;
             }
         }
@@ -168,6 +170,19 @@ public class Player : MonoBehaviour
         anim.SetBool("meleeATK", false);
         anim.SetBool("rangedATK", false);
         anim.SetInteger("transition", 0);
+    }
+    
+    void InstBullet()
+    {
+        GameObject Bullet = Instantiate(bullet, firePoint.position, firePoint.rotation);
+        if (transform.rotation.y == 0)
+        {
+            Bullet.GetComponent<PlayerShot>().isRight = true;
+        }
+        if (transform.rotation.y == 180)
+        {
+            Bullet.GetComponent<PlayerShot>().isRight = false;
+        }
     }
     
 }
