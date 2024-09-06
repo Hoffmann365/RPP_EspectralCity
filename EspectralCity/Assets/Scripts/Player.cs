@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
     {
         onAir = true;
     }
-
+    
     // Update is called once per frame
     void Update()
     {
