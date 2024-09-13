@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
         anim = GetComponent<Animator>();
         feet = GetComponent<CircleCollider2D>();
     }
-
+    
     private void OnTriggerStay2D(Collider2D feet)
     {
         onAir = false;
