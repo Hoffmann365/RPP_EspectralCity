@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine;
 public class ShadowAI : MonoBehaviour
 {
     public Transform player; // Referência ao jogador
+    public int ShadowDmg;
     public float detectionRange = 5f; // Distância em que o inimigo detecta o jogador
     public float attackRange = 1.5f; // Distância em que o inimigo ataca o jogador
     public float moveSpeed = 2f; // Velocidade de movimento do inimigo
@@ -12,6 +14,7 @@ public class ShadowAI : MonoBehaviour
     public float plusDR = 1.5f;
     public static float movement;
     private bool isAtk = false; // Controle se o inimigo está atacando
+    private float lastAttackTime; //Tempo do último ataque
     private float distanceToPlayer;
     private float origDR;
     private float altDR;
@@ -20,6 +23,7 @@ public class ShadowAI : MonoBehaviour
     private Rigidbody2D rig;
     private SpriteRenderer shadowSR;
     private CircleCollider2D coll;
+    public CircleCollider2D AtkColl;
     
     // Start is called before the first frame update
     void Start()
@@ -31,7 +35,9 @@ public class ShadowAI : MonoBehaviour
         rig = GetComponent<Rigidbody2D>();
         origDR = detectionRange;
         altDR = detectionRange + plusDR;
+        lastAttackTime = -attackCooldown; // Permite atacar imediatamente no início
     }
+    
 
     // Update is called once per frame
     void Update()
@@ -60,9 +66,9 @@ public class ShadowAI : MonoBehaviour
             MoveTowardsPlayer();
             
         }
-        else if (distanceToPlayer <= attackRange && !isAtk)
+        else if (distanceToPlayer <= attackRange && !isAtk && Time.time >= lastAttackTime + attackCooldown)
         {
-            // Se o jogador estiver dentro da área de ataque, realizar o ataque
+            // Se estiver no range de ataque, e o cooldown já passou, atacar
             StartCoroutine(Attack());
         }
         
@@ -71,7 +77,6 @@ public class ShadowAI : MonoBehaviour
     // Função para mover o inimigo na direção do jogador
     void MoveTowardsPlayer()
     {
-        movement = Input.GetAxis("Horizontal");
         detectionRange = altDR;
         // Calcula a direção do movimento
         Vector2 direction = (player.position - transform.position).normalized;
@@ -81,16 +86,26 @@ public class ShadowAI : MonoBehaviour
         // Move o inimigo na direção do jogador
         transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
     }
-    
+
     IEnumerator Attack()
     {
         isAtk = true;
 
-        // Aqui você pode adicionar o código para a animação de ataque
+        // Inicia a animação de ataque
         anim.SetInteger("transition", 2);
 
-        // Aguarda pelo tempo de cooldown do ataque
-        yield return new WaitForSeconds(attackCooldown);
+        // Aguarda um pequeno tempo antes de causar dano, simulando o tempo de execução do golpe
+        yield return new WaitForSeconds(0.4f);
+
+        // Aplica o dano ao jogador
+        GameObserver.OnDamageOnPlayer(ShadowDmg);
+
+        // Define o tempo do último ataque
+        lastAttackTime = Time.time;
+
+        // Aguardar o fim da animação e sair do estado de ataque
+        yield return new WaitForSeconds(0.2f);
+
         anim.SetInteger("transition", 1);
         isAtk = false;
     }

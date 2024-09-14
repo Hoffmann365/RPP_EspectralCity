@@ -190,6 +190,7 @@ MonoBehaviour:
   moveSpeed: 6
   attackCooldown: 1
   plusDR: 3
+  AtkColl: {fileID: 7392192503985437505}
 --- !u!1 &7317699340468356309
 GameObject:
   m_ObjectHideFlags: 0

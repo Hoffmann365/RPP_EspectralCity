@@ -1238,6 +1238,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 903338266142510497, guid: 3df7b7d51dbc47c4e99b841beb6fcf9f, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5580214269379208127, guid: 3df7b7d51dbc47c4e99b841beb6fcf9f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1277,6 +1281,10 @@ PrefabInstance:
     - target: {fileID: 5580214269379208127, guid: 3df7b7d51dbc47c4e99b841beb6fcf9f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7578556377572262494, guid: 3df7b7d51dbc47c4e99b841beb6fcf9f, type: 3}
+      propertyPath: health
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8159863023396457513, guid: 3df7b7d51dbc47c4e99b841beb6fcf9f, type: 3}
       propertyPath: m_Name
@@ -1339,6 +1347,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shadow
       objectReference: {fileID: 0}
+    - target: {fileID: 7851505603835868228, guid: 9a017987cd976ab4a87cac90d86ce6ac, type: 3}
+      propertyPath: ShadowDmg
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851505603835868228, guid: 9a017987cd976ab4a87cac90d86ce6ac, type: 3}
+      propertyPath: attackCooldown
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1352,10 +1368,10 @@ SceneRoots:
   - {fileID: 243537538}
   - {fileID: 2030934111}
   - {fileID: 1972995143124945288}
-  - {fileID: 1694485527}
   - {fileID: 2800345715597953452}
   - {fileID: 423426391611672563}
   - {fileID: 1756790832}
+  - {fileID: 1694485527}
   - {fileID: 1126129145200740776}
   - {fileID: 679395067}
   - {fileID: 794978216}

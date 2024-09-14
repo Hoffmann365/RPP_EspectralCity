@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     public PlayerSkills currentWeapon = PlayerSkills.melee;
     public float speed;
     public float jumpForce;
+    public int health;
     public bool onAir;
     public GameObject bullet;
     public Transform firePoint;
@@ -28,6 +29,16 @@ public class Player : MonoBehaviour
     private Animator anim;
     private CircleCollider2D feet;
     // Start is called before the first frame update
+    private void OnEnable()
+    {
+        GameObserver.DamageOnPlayer += Damage;
+    }
+
+    private void OnDisable()
+    {
+        GameObserver.DamageOnPlayer -= Damage;
+    }
+
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
@@ -175,7 +186,34 @@ public class Player : MonoBehaviour
         anim.SetBool("rangedATK", false);
         anim.SetInteger("transition", 0);
     }
-    
+
+    void Damage(int dmg)
+    {
+        anim.SetBool("meleeATK", false);
+        anim.SetBool("rangedATK", false);
+        anim.SetInteger("transition", 0);
+        health -= dmg;
+        //atualizar barra de vida
+        //animação de hit
+        if (transform.eulerAngles.y == 0)
+        {
+            float knockbackDirection = transform.eulerAngles.y == 0 ? -1 : 1;
+            transform.position += new Vector3(0.5f * knockbackDirection, 0, 0);
+        }
+
+        if (transform.eulerAngles.y == 180)
+        {
+            float knockbackDirection = transform.eulerAngles.y == 0 ? -1 : 1;
+            transform.position += new Vector3(0.5f * knockbackDirection, 0, 0);
+        }
+
+        if (health <= 0)
+        {
+            //morre
+        }
+
+    }
+
     void InstBullet()
     {
         GameObject Bullet = Instantiate(bullet, firePoint.position, firePoint.rotation);

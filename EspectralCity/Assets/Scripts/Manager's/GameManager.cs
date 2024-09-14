@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
     {
         
     }
+    
 
     public void CarregarCena(string nomeCena)
     {
