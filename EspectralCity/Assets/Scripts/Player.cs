@@ -106,6 +106,7 @@ public class Player : MonoBehaviour
 
                 doublejump = true;
                 AudioObserver.OnPlaySfxEvent("pulo");
+                ParticleObserver.OnParticleSpawnEvent(transform.position);
             }
             
         }
@@ -115,6 +116,7 @@ public class Player : MonoBehaviour
             rig.AddForce(new Vector2(0, jumpForce * 1), ForceMode2D.Impulse);
             doublejump = false;
             AudioObserver.OnPlaySfxEvent("pulo");
+            ParticleObserver.OnParticleSpawnEvent(transform.position); 
         }
     }
 
