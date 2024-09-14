@@ -1124,10 +1124,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2453039117634190815, guid: 422cc26db7d2e4f45a5dce1e24a9f542, type: 3}
-      propertyPath: prefabFumacinha
-      value: 
-      objectReference: {fileID: 1363834810319275306, guid: cc67f850e91a7d54a89d351b68f10c33, type: 3}
     - target: {fileID: 2942788144002489679, guid: 422cc26db7d2e4f45a5dce1e24a9f542, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.5955591

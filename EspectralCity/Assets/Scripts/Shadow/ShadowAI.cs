@@ -10,6 +10,7 @@ public class ShadowAI : MonoBehaviour
     public float moveSpeed = 2f; // Velocidade de movimento do inimigo
     public float attackCooldown = 2f; // Tempo entre ataques
     public float plusDR = 1.5f;
+    public static float movement;
     private bool isAtk = false; // Controle se o inimigo está atacando
     private float distanceToPlayer;
     private float origDR;
@@ -70,6 +71,7 @@ public class ShadowAI : MonoBehaviour
     // Função para mover o inimigo na direção do jogador
     void MoveTowardsPlayer()
     {
+        movement = Input.GetAxis("Horizontal");
         detectionRange = altDR;
         // Calcula a direção do movimento
         Vector2 direction = (player.position - transform.position).normalized;
@@ -89,9 +91,10 @@ public class ShadowAI : MonoBehaviour
 
         // Aguarda pelo tempo de cooldown do ataque
         yield return new WaitForSeconds(attackCooldown);
-
+        anim.SetInteger("transition", 1);
         isAtk = false;
     }
+
     
     // Função para desenhar a área de detecção e ataque no editor (opcional)
     private void OnDrawGizmosSelected()

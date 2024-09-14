@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 579a3a5408105104eaa78db8435137fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefabFumacinha: {fileID: 1363834810319275306, guid: cc67f850e91a7d54a89d351b68f10c33, type: 3}
 --- !u!1 &7936745374855448304
 GameObject:
   m_ObjectHideFlags: 0
