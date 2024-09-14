@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
         anim = GetComponent<Animator>();
         feet = GetComponent<CircleCollider2D>();
     }
-    
+
     private void OnTriggerStay2D(Collider2D feet)
     {
         onAir = false;
@@ -105,6 +105,7 @@ public class Player : MonoBehaviour
                 anim.SetInteger("transition", 2);
 
                 doublejump = true;
+                AudioObserver.OnPlaySfxEvent("pulo");
             }
             
         }
@@ -113,6 +114,7 @@ public class Player : MonoBehaviour
             anim.SetInteger("transition", 2);
             rig.AddForce(new Vector2(0, jumpForce * 1), ForceMode2D.Impulse);
             doublejump = false;
+            AudioObserver.OnPlaySfxEvent("pulo");
         }
     }
 
