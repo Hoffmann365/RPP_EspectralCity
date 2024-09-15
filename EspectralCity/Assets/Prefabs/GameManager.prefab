@@ -237,6 +237,7 @@ MonoBehaviour:
   sfxSource: {fileID: 6692622692634584606}
   clipPulo: {fileID: 8300000, guid: 901091c4168a4544aae40e89928eeeb2, type: 3}
   clipColetavel: {fileID: 8300000, guid: 49c69d218ebb03d428c3f04ae033992b, type: 3}
+  clipHit: {fileID: 8300000, guid: a80fc30cae1078f4e8ccf4455ac18335, type: 3}
   clipGameOver: {fileID: 8300000, guid: d694ec9fc3f6a604e8a872e5afa87fd2, type: 3}
 --- !u!82 &6692622692634584606
 AudioSource:

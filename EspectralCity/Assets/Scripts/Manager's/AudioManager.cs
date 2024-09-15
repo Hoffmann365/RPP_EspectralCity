@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
 {
     public AudioSource musicSource;
     public AudioSource sfxSource;
-    public AudioClip clipPulo, clipColetavel, clipGameOver;
+    public AudioClip clipPulo, clipColetavel,clipHit, clipGameOver;
 
     private void OnEnable()
     {
@@ -35,6 +35,9 @@ public class AudioManager : MonoBehaviour
                 break;
             case "coletavel":
                 sfxSource.PlayOneShot(clipColetavel);
+                break;
+            case "hit":
+                sfxSource.PlayOneShot(clipHit);
                 break;
             case "gameover":
                 sfxSource.PlayOneShot(clipGameOver);

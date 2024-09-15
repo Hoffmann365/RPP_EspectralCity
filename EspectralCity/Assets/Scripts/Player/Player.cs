@@ -194,7 +194,8 @@ public class Player : MonoBehaviour
         anim.SetInteger("transition", 0);
         health -= dmg;
         //atualizar barra de vida
-        //animação de hit
+        anim.SetTrigger("hit");
+        AudioObserver.OnPlaySfxEvent("hit");
         if (transform.eulerAngles.y == 0)
         {
             float knockbackDirection = transform.eulerAngles.y == 0 ? -1 : 1;
