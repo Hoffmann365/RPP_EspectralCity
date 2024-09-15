@@ -7,12 +7,12 @@ public class ShadowAI : MonoBehaviour
 {
     public Transform player; // Referência ao jogador
     public int ShadowDmg;
+    public int health;
     public float detectionRange = 5f; // Distância em que o inimigo detecta o jogador
     public float attackRange = 1.5f; // Distância em que o inimigo ataca o jogador
     public float moveSpeed = 2f; // Velocidade de movimento do inimigo
     public float attackCooldown = 2f; // Tempo entre ataques
     public float plusDR = 1.5f;
-    public static float movement;
     private bool isAtk = false; // Controle se o inimigo está atacando
     private float lastAttackTime; //Tempo do último ataque
     private float distanceToPlayer;
@@ -36,6 +36,16 @@ public class ShadowAI : MonoBehaviour
         origDR = detectionRange;
         altDR = detectionRange + plusDR;
         lastAttackTime = -attackCooldown; // Permite atacar imediatamente no início
+    }
+    
+    private void OnEnable()
+    {
+        GameObserver.DamageOnShadow += Damage;
+    }
+
+    private void OnDisable()
+    {
+        GameObserver.DamageOnShadow -= Damage;
     }
     
 
@@ -112,11 +122,27 @@ public class ShadowAI : MonoBehaviour
 
     void Damage(int dmg)
     {
-        //criar dano ao inimigo (adicionar ao observer tbm)
-        //animação de hit
+        anim.SetInteger("transition", 1);
+        health -= dmg;
+        //observer
+        anim.SetTrigger("hit");
         //som de hit
-        //knockback
-        //lógica de morte
+        if (transform.eulerAngles.y == 0)
+        {
+            float knockbackDirection = transform.eulerAngles.y == 0 ? -1 : 1;
+            transform.position += new Vector3(0.5f * knockbackDirection, 0, 0);
+        }
+
+        if (transform.eulerAngles.y == 180)
+        {
+            float knockbackDirection = transform.eulerAngles.y == 0 ? -1 : 1;
+            transform.position += new Vector3(0.5f * knockbackDirection, 0, 0);
+        }
+
+        if (health <= 0)
+        {
+            //morre
+        }
     }
 
     

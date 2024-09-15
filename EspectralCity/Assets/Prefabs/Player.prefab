@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0397dc6356bd8e648a54ac7ead3005c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MeleeAtkDmg: 1
 --- !u!1 &8159863023396457513
 GameObject:
   m_ObjectHideFlags: 0

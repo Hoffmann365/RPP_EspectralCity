@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,10 +6,20 @@ using UnityEngine;
 public class PlayerMeleeAtk : MonoBehaviour
 {
     private BoxCollider2D colliderAtkPLayer;
+
+    public int MeleeAtkDmg;
     // Start is called before the first frame update
     void Start()
     {
         colliderAtkPLayer = GetComponent<BoxCollider2D>();
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Shadow"))
+        {
+            GameObserver.OnDamageOnShadow(MeleeAtkDmg);
+        }
     }
 
     // Update is called once per frame

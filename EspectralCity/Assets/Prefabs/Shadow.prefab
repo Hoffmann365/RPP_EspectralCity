@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7851505603835868228}
   m_Layer: 0
   m_Name: Shadow
-  m_TagString: Untagged
+  m_TagString: Shadow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -186,6 +186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   ShadowDmg: 1
+  health: 100
   detectionRange: 5
   attackRange: 2.5
   moveSpeed: 6
