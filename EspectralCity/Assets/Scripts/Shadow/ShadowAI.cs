@@ -110,6 +110,15 @@ public class ShadowAI : MonoBehaviour
         isAtk = false;
     }
 
+    void Damage(int dmg)
+    {
+        //criar dano ao inimigo (adicionar ao observer tbm)
+        //animação de hit
+        //som de hit
+        //knockback
+        //lógica de morte
+    }
+
     
     // Função para desenhar a área de detecção e ataque no editor (opcional)
     private void OnDrawGizmosSelected()
