@@ -210,9 +210,18 @@ public class Player : MonoBehaviour
 
         if (health <= 0)
         {
-            //morre
+            Die();
         }
 
+    }
+
+    void Die()
+    {
+        anim.SetTrigger("die");
+        Destroy(rig);
+        Destroy(GetComponent<BoxCollider2D>());
+        Destroy(feet);
+        Destroy(gameObject,0.8f);
     }
 
     void InstBullet()

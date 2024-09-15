@@ -18,6 +18,7 @@ public class ShadowAI : MonoBehaviour
     private float distanceToPlayer;
     private float origDR;
     private float altDR;
+    private bool alive = true;
     
     private Animator anim;
     private Rigidbody2D rig;
@@ -52,35 +53,39 @@ public class ShadowAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Calcula a distância entre o inimigo e o jogador
-        distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        if (alive)
+        {
+            // Calcula a distância entre o inimigo e o jogador
+            distanceToPlayer = Vector2.Distance(transform.position, player.position);
         
-        //Desativa o SpriteRenderer e define o colisor como trigger quando o Player está fora da área de detecção
-        if (distanceToPlayer > detectionRange)
-        {
-            shadowSR.enabled = false;
-            rig.Sleep();
-            coll.isTrigger = true;
-            detectionRange = origDR;
+            //Desativa o SpriteRenderer e define o colisor como trigger quando o Player está fora da área de detecção
+            if (distanceToPlayer > detectionRange)
+            {
+                shadowSR.enabled = false;
+                rig.Sleep();
+                coll.isTrigger = true;
+                detectionRange = origDR;
 
-        }
-        else
-        {
-            shadowSR.enabled = true;
-            coll.isTrigger = false;
-            rig.IsAwake();
-        }
-        if (distanceToPlayer <= detectionRange && distanceToPlayer > attackRange)
-        {
-            // Se o jogador estiver na área de detecção, mas fora da área de ataque, mover em direção ao jogador
-            MoveTowardsPlayer();
+            }
+            else
+            {
+                shadowSR.enabled = true;
+                coll.isTrigger = false;
+                rig.IsAwake();
+            }
+            if (distanceToPlayer <= detectionRange && distanceToPlayer > attackRange)
+            {
+                // Se o jogador estiver na área de detecção, mas fora da área de ataque, mover em direção ao jogador
+                MoveTowardsPlayer();
             
+            }
+            else if (distanceToPlayer <= attackRange && !isAtk && Time.time >= lastAttackTime + attackCooldown)
+            {
+                // Se estiver no range de ataque, e o cooldown já passou, atacar
+                StartCoroutine(Attack());
+            }
         }
-        else if (distanceToPlayer <= attackRange && !isAtk && Time.time >= lastAttackTime + attackCooldown)
-        {
-            // Se estiver no range de ataque, e o cooldown já passou, atacar
-            StartCoroutine(Attack());
-        }
+        
         
     }
     
@@ -141,8 +146,17 @@ public class ShadowAI : MonoBehaviour
 
         if (health <= 0)
         {
-            //morre
+            Die();
         }
+    }
+    
+    void Die()
+    {
+        alive = false;
+        anim.SetTrigger("die");
+        Destroy(rig);
+        Destroy(coll);
+        Destroy(gameObject,0.8f);
     }
 
     

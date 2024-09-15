@@ -1216,6 +1216,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7578556377572262494, guid: 3df7b7d51dbc47c4e99b841beb6fcf9f, type: 3}
+      propertyPath: health
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8159863023396457513, guid: 3df7b7d51dbc47c4e99b841beb6fcf9f, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1276,6 +1280,10 @@ PrefabInstance:
     - target: {fileID: 6411373603665141190, guid: 9a017987cd976ab4a87cac90d86ce6ac, type: 3}
       propertyPath: m_Name
       value: Shadow
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851505603835868228, guid: 9a017987cd976ab4a87cac90d86ce6ac, type: 3}
+      propertyPath: health
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
