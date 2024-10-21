@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f943f5c9686b6204fb0a2bcb385ebe6b
+guid: ecf3f6c98d5a32e449925f031d78f611
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,274 +123,337 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Attack_2_0
+      name: Magic_sphere_0
       rect:
         serializedVersion: 2
-        x: 918
-        y: 0
-        width: 103
-        height: 72
-      alignment: 9
-      pivot: {x: 0.31444067, y: 0.46}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: acaf6760acd1d8a418816540a0b9d2a8
-      internalID: -1867066913
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Attack_2_1
-      rect:
-        serializedVersion: 2
-        x: 957
-        y: 68
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 41ebfc9250979424290bd6085afd87df
-      internalID: -661907786
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Attack_2_2
-      rect:
-        serializedVersion: 2
-        x: 1051
-        y: 0
-        width: 97
-        height: 72
-      alignment: 9
-      pivot: {x: 0.2691298, y: 0.46}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: df101bf70538b3544bdc52bb2f90df8b
-      internalID: 176528191
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Attack_2_3
-      rect:
-        serializedVersion: 2
-        x: 1085
-        y: 68
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 930e560b3773e3043897b3edfa473360
-      internalID: 71150550
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Attack_2_4
-      rect:
-        serializedVersion: 2
-        x: 31
-        y: 0
-        width: 38
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.515}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9c6307b7a69f7914584136cff5c0a611
-      internalID: -1051165183
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Attack_2_5
-      rect:
-        serializedVersion: 2
-        x: 155
+        x: 32
         y: 0
         width: 40
         height: 63
       alignment: 9
-      pivot: {x: 0.53611565, y: 0.52}
+      pivot: {x: 0.5315193, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 691c25469ee3d724ba8dfa8351f83be9
-      internalID: 2061552565
+      spriteID: 99aa7cf0c14e75e4bbd83586b924798f
+      internalID: -803747779
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_2_6
+      name: Magic_sphere_1
       rect:
         serializedVersion: 2
-        x: 286
+        x: 163
         y: 0
         width: 44
         height: 63
       alignment: 9
-      pivot: {x: 0.4130901, y: 0.52}
+      pivot: {x: 0.42359093, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1dc282052b2956649a800e72b543a4a8
-      internalID: -1272921575
+      spriteID: 28a68dd57fccb584a974b9637d8d9ca9
+      internalID: -680955360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_2_7
+      name: Magic_sphere_2
       rect:
         serializedVersion: 2
-        x: 415
+        x: 293
         y: 0
-        width: 55
-        height: 66
+        width: 60
+        height: 65
       alignment: 9
-      pivot: {x: 0.38412032, y: 0.5}
+      pivot: {x: 0.38793334, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53bffaac5a04efe44b137c2b0a042e0c
-      internalID: 1463886288
+      spriteID: 0bfbef39685e10c42aac34db774678da
+      internalID: 775405787
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_2_8
+      name: Magic_sphere_3
       rect:
         serializedVersion: 2
-        x: 544
+        x: 420
+        y: 0
+        width: 60
+        height: 65
+      alignment: 9
+      pivot: {x: 0.40194142, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f163d40967d5a94e9c93aa350151c0d
+      internalID: 814874007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magic_sphere_4
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 0
+        width: 61
+        height: 65
+      alignment: 9
+      pivot: {x: 0.3897705, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51444362d3275cb44aa97bde7c9fb384
+      internalID: -1877137665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magic_sphere_5
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 0
+        width: 62
+        height: 65
+      alignment: 9
+      pivot: {x: 0.37347314, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b3e73c8b25368247b1356a507196fa9
+      internalID: 1670430781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magic_sphere_6
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 0
+        width: 62
+        height: 65
+      alignment: 9
+      pivot: {x: 0.3666943, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b76fae4d5a23634fa264a417b27592c
+      internalID: 1291425987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magic_sphere_7
+      rect:
+        serializedVersion: 2
+        x: 933
         y: 0
         width: 59
         height: 66
       alignment: 9
-      pivot: {x: 0.36317056, y: 0.5}
+      pivot: {x: 0.3955316, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d275b7880c813c43888b66dad3263f2
-      internalID: -631511475
+      spriteID: 8b93c404b515d37409465cd13034dba7
+      internalID: 1967713096
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_2_9
+      name: Magic_sphere_8
       rect:
         serializedVersion: 2
-        x: 667
+        x: 1061
         y: 0
-        width: 65
+        width: 58
+        height: 65
+      alignment: 9
+      pivot: {x: 0.41305226, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a9e5b72b9400f42bdbf0b3ec120628
+      internalID: 109145915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magic_sphere_9
+      rect:
+        serializedVersion: 2
+        x: 1190
+        y: 0
+        width: 59
+        height: 65
+      alignment: 9
+      pivot: {x: 0.37352687, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa3a0c8c60b91414b957192e91718653
+      internalID: -1392073702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magic_sphere_11
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 0
+        width: 61
+        height: 65
+      alignment: 9
+      pivot: {x: 0.38587627, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30544b3b29e42534abe651bfe7728037
+      internalID: 1142029809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magic_sphere_13
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 0
+        width: 60
+        height: 64
+      alignment: 9
+      pivot: {x: 0.38559976, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d388348370a14943adc62031033273e
+      internalID: 2108367300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Magic_sphere_14
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 0
+        width: 75
         height: 66
       alignment: 9
-      pivot: {x: 0.39671817, y: 0.5}
+      pivot: {x: 0.43462726, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a680ef9eb99c89245ab055ff39fa2116
-      internalID: 1435140371
+      spriteID: 7c8689f52de67734683585ba690b1555
+      internalID: 1115147521
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_2_10
+      name: Magic_sphere_15
       rect:
         serializedVersion: 2
-        x: 794
+        x: 1688
         y: 0
-        width: 92
-        height: 66
+        width: 67
+        height: 64
       alignment: 9
-      pivot: {x: 0.2967901, y: 0.5}
+      pivot: {x: 0.54599863, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbcac900f9109324c850171212d817d8
-      internalID: 144915998
+      spriteID: fcb5b34fd8bed4841a8190686b5dfa87
+      internalID: 633312413
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_2_11
+      name: Magic_sphere_16
       rect:
         serializedVersion: 2
-        x: 1003
-        y: 9
-        width: 8
-        height: 8
-      alignment: 0
+        x: 1816
+        y: 0
+        width: 74
+        height: 64
+      alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa403f28990dca64a9a7e1e6341f6887
-      internalID: -1885560222
+      spriteID: c8ef8c1db0cafa248bef1d0e1016f4af
+      internalID: -1636216714
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_2_12
+      name: Magic_sphere_17
       rect:
         serializedVersion: 2
-        x: 1131
-        y: 9
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1953
+        y: 0
+        width: 58
+        height: 64
+      alignment: 9
+      pivot: {x: 0.4806792, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d284137be5c20a4b8212c6303cea303
-      internalID: 915100617
+      spriteID: 7da331b377713aa4c90cd8ab400c3851
+      internalID: -595883212
       vertices: []
       indices: 
       edges: []
@@ -406,19 +469,24 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Attack_2_0: -1867066913
-      Attack_2_1: -661907786
-      Attack_2_10: 144915998
-      Attack_2_11: -1885560222
-      Attack_2_12: 915100617
-      Attack_2_2: 176528191
-      Attack_2_3: 71150550
-      Attack_2_4: -1051165183
-      Attack_2_5: 2061552565
-      Attack_2_6: -1272921575
-      Attack_2_7: 1463886288
-      Attack_2_8: -631511475
-      Attack_2_9: 1435140371
+      Magic_sphere_0: -803747779
+      Magic_sphere_1: -680955360
+      Magic_sphere_10: -325936595
+      Magic_sphere_11: 1142029809
+      Magic_sphere_12: -1654604883
+      Magic_sphere_13: 2108367300
+      Magic_sphere_14: 1115147521
+      Magic_sphere_15: 633312413
+      Magic_sphere_16: -1636216714
+      Magic_sphere_17: -595883212
+      Magic_sphere_2: 775405787
+      Magic_sphere_3: 814874007
+      Magic_sphere_4: -1877137665
+      Magic_sphere_5: 1670430781
+      Magic_sphere_6: 1291425987
+      Magic_sphere_7: 1967713096
+      Magic_sphere_8: 109145915
+      Magic_sphere_9: -1392073702
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

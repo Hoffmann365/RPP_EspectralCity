@@ -163,7 +163,7 @@ public class Player : MonoBehaviour
                 isAtk = true;
                 anim.SetBool("meleeATK", true);
                 anim.SetInteger("transition", 3);
-                yield return new WaitForSeconds(0.2f);
+                yield return new WaitForSeconds(0.8f);
                 isAtk = false;
             }
         }
@@ -174,7 +174,7 @@ public class Player : MonoBehaviour
                 isAtk = true;
                 anim.SetBool("rangedATK", true);
                 anim.SetInteger("transition", 4);
-                yield return new WaitForSeconds(2f);
+                yield return new WaitForSeconds(1.4f);
                 isAtk = false;
             }
         }
