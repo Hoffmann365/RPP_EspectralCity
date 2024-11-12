@@ -298,8 +298,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentWeapon: 0
-  speed: 10
-  jumpForce: 15
+  speed: 5
+  jumpForce: 12
   health: 5
   onAir: 0
   bullet: {fileID: 6543109089697980516, guid: b697ee2aaeede8f4796808aa3864983c, type: 3}
