@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 7578556377572262494}
   - component: {fileID: 411589211530729144}
   - component: {fileID: 39465571347657287}
+  - component: {fileID: 2198625494025255187}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -300,7 +301,7 @@ MonoBehaviour:
   currentWeapon: 0
   speed: 5
   jumpForce: 12
-  health: 5
+  health: 100
   onAir: 0
   bullet: {fileID: 6543109089697980516, guid: b697ee2aaeede8f4796808aa3864983c, type: 3}
   firePoint: {fileID: 514494047279043918}
@@ -360,3 +361,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2198625494025255187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8159863023396457513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbef7b793c6c0c74cb5aa4764bc32654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 0}
+  bg_100: {fileID: -1461621996, guid: d2c1cfa8745eca745bbf483b33ad80f0, type: 3}
+  bg_75: {fileID: 1717524379, guid: d2c1cfa8745eca745bbf483b33ad80f0, type: 3}
+  bg_50: {fileID: -345007159, guid: d2c1cfa8745eca745bbf483b33ad80f0, type: 3}
+  bg_25: {fileID: 1673736097, guid: d2c1cfa8745eca745bbf483b33ad80f0, type: 3}
+  background: {fileID: 0}
