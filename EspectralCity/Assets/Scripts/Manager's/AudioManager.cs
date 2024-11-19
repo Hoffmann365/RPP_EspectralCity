@@ -14,6 +14,8 @@ public class AudioManager : MonoBehaviour
     {
         AudioObserver.PlaySfxEvent += TocarEfeitoSonoro;
         AudioObserver.PlayMusicEvent += TocarMusica;
+        AudioObserver.PauseMusicEvent += PausarMusica;
+        AudioObserver.UnpauseMusicEvent += DespausarMusica;
         AudioObserver.StopMusicEvent += PararMusica;
         
     }
@@ -22,6 +24,8 @@ public class AudioManager : MonoBehaviour
     {
         AudioObserver.PlaySfxEvent -= TocarEfeitoSonoro;
         AudioObserver.PlayMusicEvent -= TocarMusica;
+        AudioObserver.PauseMusicEvent -= PausarMusica;
+        AudioObserver.UnpauseMusicEvent -= DespausarMusica;
         AudioObserver.StopMusicEvent -= PararMusica;
         
     }
@@ -58,5 +62,14 @@ public class AudioManager : MonoBehaviour
     {
         musicSource.Stop();
     }
-    
+
+    void PausarMusica()
+    {
+        musicSource.Pause();
+    }
+
+    void DespausarMusica()
+    {
+        musicSource.UnPause();
+    }
 }

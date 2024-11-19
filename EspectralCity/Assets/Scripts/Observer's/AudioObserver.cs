@@ -8,6 +8,10 @@ public static class AudioObserver
     public static event Action<string> PlaySfxEvent; 
     public static event Action PlayMusicEvent;
     
+    public static event Action PauseMusicEvent;
+    
+    public static event Action UnpauseMusicEvent;
+    
     public static event Action StopMusicEvent;
 
     public static void OnPlaySfxEvent(string obj)
@@ -23,5 +27,15 @@ public static class AudioObserver
     public static void OnStopMusicEvent()
     {
         StopMusicEvent?.Invoke();
+    }
+
+    public static void OnPauseMusicEvent()
+    {
+        PauseMusicEvent?.Invoke();
+    }
+
+    public static void OnUnpauseMusicEvent()
+    {
+        UnpauseMusicEvent?.Invoke();
     }
 }

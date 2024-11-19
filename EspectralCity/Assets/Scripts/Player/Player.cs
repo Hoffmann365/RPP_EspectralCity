@@ -222,6 +222,7 @@ public class Player : MonoBehaviour
         Destroy(GetComponent<BoxCollider2D>());
         Destroy(feet);
         Destroy(gameObject,0.8f);
+        GameObserver.OnGameOver();
     }
 
     void InstBullet()
