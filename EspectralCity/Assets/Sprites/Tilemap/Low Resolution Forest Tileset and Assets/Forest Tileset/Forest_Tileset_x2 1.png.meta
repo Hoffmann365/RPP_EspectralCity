@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 268da47d6323ecd4fb22b1e79daeabd3
+guid: 8a5e7c1cc963e0b48a7ceba02af8b0f8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Forest_Tileset_x4_0
+      name: Forest_Tileset_x2 1_0
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 160
-        height: 160
+        x: 16
+        y: 16
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,19 +137,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04afc080791e3a543a83019c7ca2a53e
-      internalID: 1334149615
+      spriteID: 943317c0f6b12fe4f9038ada68189634
+      internalID: 619159471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Forest_Tileset_x4_1
+      name: Forest_Tileset_x2 1_1
       rect:
         serializedVersion: 2
-        x: 224
-        y: 160
-        width: 96
+        x: 112
+        y: 80
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f744304227588cc45949e9495109ed62
+      internalID: -377172819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tileset_x2 1_2
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 64
+        width: 80
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -158,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 444d778a476386e4b87a098201c2484c
-      internalID: -190856289
+      spriteID: 55d4af6e4e9fe5e4dac3d248d6b5a555
+      internalID: 74620801
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Forest_Tileset_x4_2
+      name: Forest_Tileset_x2 1_3
       rect:
         serializedVersion: 2
-        x: 352
-        y: 128
-        width: 160
-        height: 64
+        x: 272
+        y: 80
+        width: 32
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,19 +200,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ac200cb1dcc5454686803047a878010
-      internalID: -366942442
+      spriteID: 698492c737dd0144bb8b25b933769ac1
+      internalID: 723339961
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Forest_Tileset_x4_3
+      name: Forest_Tileset_x2 1_4
       rect:
         serializedVersion: 2
-        x: 544
-        y: 160
-        width: 64
+        x: 112
+        y: 16
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14d7c3a21fad505459f807b7a3177292
+      internalID: 352512383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tileset_x2 1_5
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 16
+        width: 80
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -200,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f84b4eb80a501c648ae06e71dda7d6d8
-      internalID: 2096026942
+      spriteID: e16fb8ba07231df438cd2ba5eecf72e6
+      internalID: 1537877943
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Forest_Tileset_x4_4
+      name: Forest_Tileset_x2 1_6
       rect:
         serializedVersion: 2
-        x: 224
-        y: 32
-        width: 96
-        height: 96
+        x: 272
+        y: 16
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,50 +263,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efcc24dbc21a7484098fc15f1ed07dff
-      internalID: 132389707
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Forest_Tileset_x4_5
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 32
-        width: 160
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cdcca5ab1a3481c43a462f1a21767a10
-      internalID: 1046947984
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Forest_Tileset_x4_6
-      rect:
-        serializedVersion: 2
-        x: 544
-        y: 32
-        width: 64
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 69fcbf3e92b9b2a47b136d662616aefa
-      internalID: 1132008238
+      spriteID: 47216a7af78832742a25b8233cc7f9c3
+      internalID: 1308541850
       vertices: []
       indices: 
       edges: []
@@ -280,13 +280,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Forest_Tileset_x4_0: 1334149615
-      Forest_Tileset_x4_1: -190856289
-      Forest_Tileset_x4_2: -366942442
-      Forest_Tileset_x4_3: 2096026942
-      Forest_Tileset_x4_4: 132389707
-      Forest_Tileset_x4_5: 1046947984
-      Forest_Tileset_x4_6: 1132008238
+      Forest_Tileset_x2 1_0: 619159471
+      Forest_Tileset_x2 1_1: -377172819
+      Forest_Tileset_x2 1_2: 74620801
+      Forest_Tileset_x2 1_3: 723339961
+      Forest_Tileset_x2 1_4: 352512383
+      Forest_Tileset_x2 1_5: 1537877943
+      Forest_Tileset_x2 1_6: 1308541850
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

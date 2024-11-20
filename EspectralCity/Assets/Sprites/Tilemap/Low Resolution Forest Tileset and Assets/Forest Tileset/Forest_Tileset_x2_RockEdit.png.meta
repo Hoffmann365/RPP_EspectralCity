@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 268da47d6323ecd4fb22b1e79daeabd3
+guid: cf637602a243bcc46b1888c45894ab1f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -81,19 +81,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -123,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Forest_Tileset_x4_0
+      name: Forest_Tileset_x2_RockEdit_0
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 160
-        height: 160
+        x: 16
+        y: 16
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,19 +124,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04afc080791e3a543a83019c7ca2a53e
-      internalID: 1334149615
+      spriteID: 923802eda2d60114f80e8cb6fc0aed01
+      internalID: -1060295101
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Forest_Tileset_x4_1
+      name: Forest_Tileset_x2_RockEdit_1
       rect:
         serializedVersion: 2
-        x: 224
-        y: 160
-        width: 96
+        x: 112
+        y: 80
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb7a50aa789f9344692a93d81c39d46a
+      internalID: 344666315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tileset_x2_RockEdit_2
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 64
+        width: 80
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -158,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 444d778a476386e4b87a098201c2484c
-      internalID: -190856289
+      spriteID: 418c5a59d38379544ac08be03b4446bf
+      internalID: -273939714
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Forest_Tileset_x4_2
+      name: Forest_Tileset_x2_RockEdit_3
       rect:
         serializedVersion: 2
-        x: 352
-        y: 128
-        width: 160
-        height: 64
+        x: 272
+        y: 80
+        width: 32
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,19 +187,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ac200cb1dcc5454686803047a878010
-      internalID: -366942442
+      spriteID: 7e9d31dd0fbfa8b49b6df17d93f9b3b7
+      internalID: -1820361273
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Forest_Tileset_x4_3
+      name: Forest_Tileset_x2_RockEdit_4
       rect:
         serializedVersion: 2
-        x: 544
-        y: 160
-        width: 64
+        x: 112
+        y: 16
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 166553010384f3d40b097bef35c75693
+      internalID: -1354068954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Forest_Tileset_x2_RockEdit_5
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 16
+        width: 80
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -200,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f84b4eb80a501c648ae06e71dda7d6d8
-      internalID: 2096026942
+      spriteID: 2bf8072e6dddd2a4f8185fec47f3db5c
+      internalID: -922917453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Forest_Tileset_x4_4
+      name: Forest_Tileset_x2_RockEdit_6
       rect:
         serializedVersion: 2
-        x: 224
-        y: 32
-        width: 96
-        height: 96
+        x: 272
+        y: 16
+        width: 32
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,50 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efcc24dbc21a7484098fc15f1ed07dff
-      internalID: 132389707
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Forest_Tileset_x4_5
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 32
-        width: 160
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cdcca5ab1a3481c43a462f1a21767a10
-      internalID: 1046947984
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Forest_Tileset_x4_6
-      rect:
-        serializedVersion: 2
-        x: 544
-        y: 32
-        width: 64
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 69fcbf3e92b9b2a47b136d662616aefa
-      internalID: 1132008238
+      spriteID: 3544d29660c87804f9dd74819bcf919b
+      internalID: 1563858371
       vertices: []
       indices: 
       edges: []
@@ -280,13 +267,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Forest_Tileset_x4_0: 1334149615
-      Forest_Tileset_x4_1: -190856289
-      Forest_Tileset_x4_2: -366942442
-      Forest_Tileset_x4_3: 2096026942
-      Forest_Tileset_x4_4: 132389707
-      Forest_Tileset_x4_5: 1046947984
-      Forest_Tileset_x4_6: 1132008238
+      Forest_Tileset_x2_RockEdit_0: -1060295101
+      Forest_Tileset_x2_RockEdit_1: 344666315
+      Forest_Tileset_x2_RockEdit_2: -273939714
+      Forest_Tileset_x2_RockEdit_3: -1820361273
+      Forest_Tileset_x2_RockEdit_4: -1354068954
+      Forest_Tileset_x2_RockEdit_5: -922917453
+      Forest_Tileset_x2_RockEdit_6: 1563858371
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
