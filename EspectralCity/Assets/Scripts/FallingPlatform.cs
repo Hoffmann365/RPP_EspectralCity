@@ -8,6 +8,7 @@ public class FallingPlatform : MonoBehaviour
     SpriteRenderer spriteRenderer;
     CapsuleCollider2D collider2D;
 
+    public float waitToFall = 0.2f;
     public float fallDelay = 2f; // Tempo para a plataforma cair
     public float respawnDelay = 3f; // Tempo para reaparecer
     Vector2 initialPosition;
@@ -24,7 +25,7 @@ public class FallingPlatform : MonoBehaviour
     IEnumerator FallAndRespawn()
     {
         // Aguarda antes de fazer a plataforma cair
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(waitToFall);
         rb.bodyType = RigidbodyType2D.Dynamic; // Torna a plataforma dinâmica para cair
 
         // Aguarda o tempo de queda
