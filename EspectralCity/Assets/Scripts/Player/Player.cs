@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     public float jumpForce;
     public int health;
     public bool onAir;
+    public bool hasKey = false;
     public GameObject bullet;
     public Transform firePoint;
     
@@ -28,10 +29,12 @@ public class Player : MonoBehaviour
     private Rigidbody2D rig;
     private Animator anim;
     private CircleCollider2D feet;
+    
     // Start is called before the first frame update
     private void OnEnable()
     {
         GameObserver.DamageOnPlayer += Damage;
+        
     }
 
     private void OnDisable()
@@ -44,6 +47,15 @@ public class Player : MonoBehaviour
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         feet = GetComponent<CircleCollider2D>();
+    }
+    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Key"))
+        {
+            CollectablesObserver.OnAddKeysEvent();
+            Destroy(collision.gameObject); // Remove a chave do jogo
+        }
     }
 
     private void OnTriggerStay2D(Collider2D feet)

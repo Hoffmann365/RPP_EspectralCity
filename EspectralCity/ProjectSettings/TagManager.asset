@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Shadow
   - EnchantedSpirit
+  - Key
   layers:
   - Default
   - TransparentFX
