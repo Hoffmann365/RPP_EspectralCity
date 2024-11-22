@@ -73,7 +73,7 @@ public class CogumeloPatrol : MonoBehaviour
         transform.localScale = localScale;
     }
 
-    void Damage(int dmg)
+    public void Damage(int dmg)
     {
         health -= dmg;
         //animação de hit

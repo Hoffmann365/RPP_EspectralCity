@@ -24,13 +24,16 @@ public class PlayerShot : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Shadow"))
+        ShadowAI shadow = other.gameObject.GetComponent<ShadowAI>();
+        CogumeloPatrol cog = other.gameObject.GetComponent<CogumeloPatrol>();
+        if (shadow != null)
         {
-            
+            shadow.Damage(bulletDmg);
             Destroy(gameObject);
         }
-        if (other.gameObject.CompareTag("Cogumelo"))
+        if (cog != null)
         {
+            cog.Damage(bulletDmg);
             Destroy(gameObject);
         }
         else

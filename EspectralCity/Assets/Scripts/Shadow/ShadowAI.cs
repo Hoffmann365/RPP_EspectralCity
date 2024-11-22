@@ -125,7 +125,7 @@ public class ShadowAI : MonoBehaviour
         isAtk = false;
     }
 
-    void Damage(int dmg)
+    public void Damage(int dmg)
     {
         anim.SetInteger("transition", 1);
         health -= dmg;

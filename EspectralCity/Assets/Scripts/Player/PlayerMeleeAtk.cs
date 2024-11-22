@@ -16,13 +16,15 @@ public class PlayerMeleeAtk : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Shadow"))
+        ShadowAI shadow = other.gameObject.GetComponent<ShadowAI>();
+        CogumeloPatrol cog = other.gameObject.GetComponent<CogumeloPatrol>();
+        if (shadow != null)
         {
-            GameObserver.OnDamageOnShadow(MeleeAtkDmg);
+            shadow.Damage(MeleeAtkDmg);
         }
-        if (other.gameObject.CompareTag("Cogumelo"))
+        if (cog != null)
         {
-            GameObserver.OnDamageOnCogumelo(MeleeAtkDmg);
+            cog.Damage(MeleeAtkDmg);
         }
     }
 
