@@ -12,6 +12,8 @@ public class PlayerShot : MonoBehaviour
     public bool isRight;
 
     public int bulletDmg;
+
+    private CogumeloPatrol cog;
     
     // Start is called before the first frame update
     void Start()
@@ -24,12 +26,11 @@ public class PlayerShot : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Shadow"))
         {
-            GameObserver.OnDamageOnShadow(bulletDmg);
+            
             Destroy(gameObject);
         }
         if (other.gameObject.CompareTag("Cogumelo"))
         {
-            GameObserver.OnDamageOnCogumelo(bulletDmg);
             Destroy(gameObject);
         }
         else

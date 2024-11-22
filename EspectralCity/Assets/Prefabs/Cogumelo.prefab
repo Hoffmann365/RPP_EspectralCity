@@ -195,6 +195,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   patrolDistance: 5
-  health: 10
+  health: 1
   cogumeloDmg: 5
   alive: 1

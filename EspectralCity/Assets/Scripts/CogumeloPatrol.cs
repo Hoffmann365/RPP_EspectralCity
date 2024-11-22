@@ -111,6 +111,11 @@ public class CogumeloPatrol : MonoBehaviour
         {
             GameObserver.OnDamageOnPlayer(cogumeloDmg);
         }
+
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+         
+        }
     }
 
     // Exibe as setas de patrulha no editor
