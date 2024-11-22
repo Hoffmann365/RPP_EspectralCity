@@ -27,6 +27,11 @@ public class PlayerShot : MonoBehaviour
             GameObserver.OnDamageOnShadow(bulletDmg);
             Destroy(gameObject);
         }
+        if (other.gameObject.CompareTag("Cogumelo"))
+        {
+            GameObserver.OnDamageOnCogumelo(bulletDmg);
+            Destroy(gameObject);
+        }
         else
         {
             Destroy(gameObject);

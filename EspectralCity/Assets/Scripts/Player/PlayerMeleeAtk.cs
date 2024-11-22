@@ -20,6 +20,10 @@ public class PlayerMeleeAtk : MonoBehaviour
         {
             GameObserver.OnDamageOnShadow(MeleeAtkDmg);
         }
+        if (other.gameObject.CompareTag("Cogumelo"))
+        {
+            GameObserver.OnDamageOnCogumelo(MeleeAtkDmg);
+        }
     }
 
     // Update is called once per frame
