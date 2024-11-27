@@ -7,6 +7,7 @@ using Slider = UnityEngine.UI.Slider;
 public class HealthBar : MonoBehaviour
 {
     public Slider slider;
+    public GameObject Hbar;
 
     Player player;
     public Sprite bg_100;
@@ -17,11 +18,15 @@ public class HealthBar : MonoBehaviour
     public GameObject background;
 
     private Image i;
+    
 
     // Start is called before the first frame update
     void Start()
     {
+        background = GameObject.FindGameObjectWithTag("bg");
         player = GetComponent<Player>();
+        Hbar = GameObject.FindGameObjectWithTag("HealthBar");
+        slider = Hbar.GetComponent<Slider>();
         i = background.GetComponent<Image>();
         i.sprite = bg_100;
     }

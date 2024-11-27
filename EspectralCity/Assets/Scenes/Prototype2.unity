@@ -197,6 +197,7 @@ GameObject:
   - component: {fileID: 116698065}
   - component: {fileID: 116698068}
   - component: {fileID: 116698069}
+  - component: {fileID: 116698070}
   m_Layer: 0
   m_Name: Bone
   m_TagString: Untagged
@@ -268,7 +269,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -1467189560, guid: 18f6903a189bebe43bc822b8cd8400dd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1.5, y: 1}
@@ -364,6 +365,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &116698070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116698064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a184845eed170749afef0ab25b0dd56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolDistance: 5
+  speed: 2
+  attackRange: 1.6
+  damage: 10
+  attackCooldown: 1
+  player: {fileID: 606138946}
 --- !u!1001 &189822428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -596,6 +615,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1823056842604403551, guid: 422cc26db7d2e4f45a5dce1e24a9f542, type: 3}
+      propertyPath: m_TagString
+      value: bg
+      objectReference: {fileID: 0}
+    - target: {fileID: 2557660326346683293, guid: 422cc26db7d2e4f45a5dce1e24a9f542, type: 3}
+      propertyPath: m_TagString
+      value: HealthBar
+      objectReference: {fileID: 0}
     - target: {fileID: 2942788144002489679, guid: 422cc26db7d2e4f45a5dce1e24a9f542, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.5955591

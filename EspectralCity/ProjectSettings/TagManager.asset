@@ -9,6 +9,8 @@ TagManager:
   - Key
   - Cogumelo
   - Bullet
+  - bg
+  - HealthBar
   layers:
   - Default
   - TransparentFX
