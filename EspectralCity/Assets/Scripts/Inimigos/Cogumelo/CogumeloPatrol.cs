@@ -51,6 +51,7 @@ public class CogumeloPatrol : MonoBehaviour
 
     private void Patrol()
     {
+        anim.SetInteger("transition", 1);
         // Move o inimigo na direção do alvo
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
 
@@ -76,7 +77,7 @@ public class CogumeloPatrol : MonoBehaviour
     public void Damage(int dmg)
     {
         health -= dmg;
-        //animação de hit
+        anim.SetTrigger("hit");
         //som de hit
         if (transform.eulerAngles.y == 0)
         {
@@ -90,6 +91,7 @@ public class CogumeloPatrol : MonoBehaviour
             transform.position += new Vector3(0.5f * knockbackDirection, 0, 0);
         }
         
+        
         if (health <= 0)
         {
             Die();
@@ -99,7 +101,7 @@ public class CogumeloPatrol : MonoBehaviour
     void Die()
     {
         alive = false;
-        //animação de morte
+        anim.SetTrigger("die");
         Destroy(rig);
         Destroy(coll);
         Destroy(gameObject, 0.8f);

@@ -133,7 +133,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3450613405590413705, guid: baaf79fce0ddb524e8f9ddf2a19f9cd9, type: 3}
       propertyPath: nextScene
-      value: Prototype
+      value: Fase 3 - Cidade Espectral
       objectReference: {fileID: 0}
     - target: {fileID: 3860719309289710098, guid: baaf79fce0ddb524e8f9ddf2a19f9cd9, type: 3}
       propertyPath: m_LocalPosition.x
