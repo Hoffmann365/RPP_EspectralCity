@@ -9,15 +9,21 @@ public class SkeletonEnemy : MonoBehaviour
     private Vector3 patrolPointB;  // Ponto final de patrulha
     public float patrolDistance = 5f;
     public float speed = 2f;        // Velocidade de patrulha
-    public float attackRange = 1.5f; // Distância de alcance para o ataque
     public int damage = 10;         // Dano causado ao jogador
     public float attackCooldown = 1f; // Tempo entre ataques
-    public Transform player;        // Referência ao jogador
     private bool isAtk;
+    public int health = 10;
+    private bool alive = true;
+    
     
     private Vector3 currentTarget;  // Alvo atual para a patrulha
     private float lastAttackTime = 0f; // Tempo do último ataque
+    
+    private Rigidbody2D rig;
     private Animator anim;
+    private BoxCollider2D coll;
+    
+    private AtkRange atkRange;
 
     private void Start()
     {
@@ -25,19 +31,27 @@ public class SkeletonEnemy : MonoBehaviour
         patrolPointA = transform.position - Vector3.right * (patrolDistance / 2);
         patrolPointB = transform.position + Vector3.right * (patrolDistance / 2);
         currentTarget = patrolPointA; // Começa indo para o ponto A
+        
+        rig = GetComponent<Rigidbody2D>();
+        coll = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
+        
+        atkRange = GetComponentInChildren<AtkRange>();
     }
 
     private void Update()
     {
-        // Se o jogador está no alcance de ataque, ataca
-        if (Vector3.Distance(transform.position, player.position) <= attackRange)
+        if (alive)
         {
-            Attack();
-        }
-        else
-        {
-            Patrol(); // Caso contrário, patrulha entre os pontos
+            // Se o jogador está no alcance de ataque, ataca
+            if (atkRange != null && atkRange.playerInRange)
+            {
+                Attack();
+            }
+            else
+            {
+                Patrol(); // Caso contrário, patrulha entre os pontos
+            }
         }
     }
 
@@ -64,7 +78,6 @@ public class SkeletonEnemy : MonoBehaviour
         if (Time.time - lastAttackTime >= attackCooldown && !isAtk)
         {
             // Aqui você pode adicionar animações ou efeitos de ataque
-            Debug.Log("Esqueleto atacou!");
             StartCoroutine(Atk());
 
         }
@@ -88,6 +101,7 @@ public class SkeletonEnemy : MonoBehaviour
 
         // Aguardar o fim da animação e sair do estado de ataque
         yield return new WaitForSeconds(0.2f);
+        Debug.Log("Esqueleto atacou!");
 
         anim.SetInteger("transition", 1);
         isAtk = false;
@@ -99,6 +113,39 @@ public class SkeletonEnemy : MonoBehaviour
         Vector3 localScale = transform.localScale;
         localScale.x *= -1;
         transform.localScale = localScale;
+    }
+    
+    public void Damage(int dmg)
+    {
+        health -= dmg;
+        anim.SetTrigger("hit");
+        //som de hit
+        if (transform.eulerAngles.y == 0)
+        {
+            float knockbackDirection = transform.eulerAngles.y == 0 ? -1 : 1;
+            transform.position += new Vector3(0.5f * knockbackDirection, 0, 0);
+        }
+
+        if (transform.eulerAngles.y == 180)
+        {
+            float knockbackDirection = transform.eulerAngles.y == 0 ? -1 : 1;
+            transform.position += new Vector3(0.5f * knockbackDirection, 0, 0);
+        }
+        anim.SetInteger("transition", 1);
+        
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        alive = false;
+        anim.SetTrigger("die");
+        Destroy(rig);
+        Destroy(coll);
+        Destroy(gameObject, 1f);
     }
 
     private void OnDrawGizmos()
@@ -118,9 +165,5 @@ public class SkeletonEnemy : MonoBehaviour
             Gizmos.DrawSphere(start, 0.2f);
             Gizmos.DrawSphere(end, 0.2f);
         }
-
-        // Desenha o alcance de ataque no editor
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 }

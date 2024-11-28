@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class DoorProximity : MonoBehaviour
@@ -21,4 +22,5 @@ public class DoorProximity : MonoBehaviour
             Debug.Log("Jogador saiu da proximidade da porta.");
         }
     }
+    
 }

@@ -26,6 +26,7 @@ public class PlayerShot : MonoBehaviour
     {
         ShadowAI shadow = other.gameObject.GetComponent<ShadowAI>();
         CogumeloPatrol cog = other.gameObject.GetComponent<CogumeloPatrol>();
+        SkeletonEnemy skeleton = other.gameObject.GetComponent<SkeletonEnemy>();
         if (shadow != null)
         {
             shadow.Damage(bulletDmg);
@@ -34,6 +35,12 @@ public class PlayerShot : MonoBehaviour
         if (cog != null)
         {
             cog.Damage(bulletDmg);
+            Destroy(gameObject);
+        }
+
+        if (skeleton != null)
+        {
+            skeleton.Damage(bulletDmg);
             Destroy(gameObject);
         }
         else
