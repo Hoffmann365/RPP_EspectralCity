@@ -60,13 +60,20 @@ public class Player : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D feet)
     {
-        onAir = false;
-        isJumping = false;
+        if (feet.gameObject.layer == LayerMask.NameToLayer("Floor"))
+        {
+            onAir = false;
+            isJumping = false;
+        }
+        
     }
 
     private void OnTriggerExit2D(Collider2D feet)
     {
-        onAir = true;
+        if (feet.gameObject.layer == LayerMask.NameToLayer("Floor"))
+        {
+            onAir = true;
+        }
     }
     
     // Update is called once per frame
@@ -119,27 +126,14 @@ public class Player : MonoBehaviour
 
     void Jump()
     {
-        if (Input.GetButtonDown("Jump") && !onAir)
+        if (Input.GetButtonDown("Jump") && !onAir) // Verifica se o jogador está no chão
         {
-            if (!isJumping)
-            {
-                isJumping = true;
-                rig.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-                anim.SetInteger("transition", 2);
-
-                doublejump = true;
-                AudioObserver.OnPlaySfxEvent("pulo");
-                ParticleObserver.OnParticleSpawnEvent(transform.position);
-            }
-            
-        }
-        else if (Input.GetButtonDown("Jump") && doublejump)
-        {
-            anim.SetInteger("transition", 2);
-            rig.AddForce(new Vector2(0, jumpForce * 1), ForceMode2D.Impulse);
-            doublejump = false;
-            AudioObserver.OnPlaySfxEvent("pulo");
-            ParticleObserver.OnParticleSpawnEvent(transform.position); 
+            isJumping = true; // Define que o jogador está pulando
+            rig.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse); // Aplica a força para o pulo
+            anim.SetInteger("transition", 2); // Define a animação de pulo
+        
+            AudioObserver.OnPlaySfxEvent("pulo"); // Reproduz o som do pulo
+            ParticleObserver.OnParticleSpawnEvent(transform.position); // Gera partículas no local do jogador
         }
     }
 
