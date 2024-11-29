@@ -22,6 +22,7 @@ public class FairyFollow : MonoBehaviour
     {
         FollowPlayer();
         HoverEffect();
+        UpdateOrientation();
     }
 
     void FollowPlayer()
@@ -37,5 +38,22 @@ public class FairyFollow : MonoBehaviour
         // Adiciona um efeito de flutuação (vai e vem) na posição Y
         float hover = Mathf.Sin(Time.time * hoverFrequency) * hoverAmplitude;
         transform.position += new Vector3(0, hover, 0) * Time.deltaTime;
+    }
+    
+    void UpdateOrientation()
+    {
+        Vector3 scale = transform.localScale; // Obtém a escala atual da fada
+
+        // Verifica se o player está olhando para a direita (Y = 0) ou para a esquerda (Y = 180)
+        if (player.eulerAngles.y == 0)
+        {
+            scale.x = Mathf.Abs(scale.x); // Garante que o eixo X seja positivo
+        }
+        else if (player.eulerAngles.y == 180)
+        {
+            scale.x = -Mathf.Abs(scale.x); // Garante que o eixo X seja negativo
+        }
+
+        transform.localScale = scale; // Atualiza a escala da fada
     }
 }

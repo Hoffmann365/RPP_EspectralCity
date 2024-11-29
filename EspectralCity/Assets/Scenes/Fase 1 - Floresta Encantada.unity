@@ -80444,7 +80444,7 @@ Transform:
   m_GameObject: {fileID: 917720428}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.271889, y: -1.4999943, z: -10}
+  m_LocalPosition: {x: -8.257721, y: -1.4999943, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -90673,18 +90673,6 @@ PrefabInstance:
       value: Aurora
       objectReference: {fileID: 0}
     - target: {fileID: 5651873774680844559, guid: 7b49aa9ae20e0f14b8d38e31bc1cd40d, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.9309127
-      objectReference: {fileID: 0}
-    - target: {fileID: 5651873774680844559, guid: 7b49aa9ae20e0f14b8d38e31bc1cd40d, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.256803
-      objectReference: {fileID: 0}
-    - target: {fileID: 5651873774680844559, guid: 7b49aa9ae20e0f14b8d38e31bc1cd40d, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2.9309127
-      objectReference: {fileID: 0}
-    - target: {fileID: 5651873774680844559, guid: 7b49aa9ae20e0f14b8d38e31bc1cd40d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.487
       objectReference: {fileID: 0}
@@ -90724,10 +90712,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8642998505535495462, guid: 7b49aa9ae20e0f14b8d38e31bc1cd40d, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: b7f49c8808a85fb49b26d717ab3e368f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
