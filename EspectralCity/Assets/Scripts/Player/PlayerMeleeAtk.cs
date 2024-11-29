@@ -19,6 +19,7 @@ public class PlayerMeleeAtk : MonoBehaviour
         ShadowAI shadow = other.gameObject.GetComponent<ShadowAI>();
         CogumeloPatrol cog = other.gameObject.GetComponent<CogumeloPatrol>();
         SkeletonEnemy skeleton = other.gameObject.GetComponent<SkeletonEnemy>();
+        CogumeloBoss pcog = other.gameObject.GetComponent<CogumeloBoss>();
         if (shadow != null)
         {
             shadow.Damage(MeleeAtkDmg);
@@ -31,6 +32,11 @@ public class PlayerMeleeAtk : MonoBehaviour
         if (skeleton != null)
         {
             skeleton.Damage(MeleeAtkDmg);
+        }
+
+        if (pcog != null)
+        {
+            pcog.Damage(MeleeAtkDmg);
         }
     }
 

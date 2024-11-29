@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f79129fca44673144a2211a886bbc5ce
+guid: 8e0bb4d25b0eea04bb2fac4c6f6684b9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -81,19 +81,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -123,74 +110,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cogumelo Verde_0
+      name: Ataque do Principe (1)_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 144
-        width: 30
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e64b72d8adb3d6747b1a1ec2bb18d6f9
-      internalID: 948355412
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cogumelo Verde_1
-      rect:
-        serializedVersion: 2
-        x: 75
-        y: 147
-        width: 30
-        height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8d5eba665f94c4f49aad44abfbb48121
-      internalID: -720767681
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cogumelo Verde_2
-      rect:
-        serializedVersion: 2
-        x: 139
-        y: 147
-        width: 30
-        height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4ba85a845087c68439d34c9726a209c9
-      internalID: 426423748
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cogumelo Verde_3
-      rect:
-        serializedVersion: 2
-        x: 11
-        y: 84
+        x: 25
+        y: 0
         width: 30
         height: 32
       alignment: 0
@@ -200,20 +124,188 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ddaa6136079b249488dc219f13d3ad69
-      internalID: 1465527976
+      spriteID: 9432520bc16399a46b3bc2bc28dc369d
+      internalID: 1555728837
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cogumelo Verde_4
+      name: Ataque do Principe (1)_1
       rect:
         serializedVersion: 2
-        x: 75
-        y: 81
+        x: 116
+        y: 0
+        width: 29
+        height: 32
+      alignment: 9
+      pivot: {x: 0.23580933, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1da0395586cee3644bbd08500ac527b9
+      internalID: -965504735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque do Principe (1)_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 34
+        height: 32
+      alignment: 9
+      pivot: {x: 0.184525, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2b50a3b02e6b104fa43c1ba2ca11925
+      internalID: -495930946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque do Principe (1)_3
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 0
+        width: 34
+        height: 32
+      alignment: 9
+      pivot: {x: 0.2, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44e8471c091a81f42a84056e8c34279c
+      internalID: 524555638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque do Principe (1)_4
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 2
+        width: 28
+        height: 32
+      alignment: 9
+      pivot: {x: 0.71, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 376655e3964aec2449d4b9f3e85dd867
+      internalID: 1109036164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque do Principe (1)_5
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.86, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb7fe8e78a5617c4ca40da8592ef129c
+      internalID: 1428531761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque do Principe (1)_6
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.8, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b982acd22f9e484e9f3a29c052eba40
+      internalID: -417380207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque do Principe (1)_7
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 0
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.83, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc76f29a7af9f9d4e88364c1412c70cb
+      internalID: 727820550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque do Principe (1)_8
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 3
+        width: 31
+        height: 32
+      alignment: 9
+      pivot: {x: 0.83, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fa4cd158a569fe458033de561783d62
+      internalID: -1389040665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque do Principe (1)_9
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 0
         width: 30
-        height: 35
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,71 +313,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b65ec533209c51a4f8c05456e3129c0f
-      internalID: -20935056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cogumelo Verde_5
-      rect:
-        serializedVersion: 2
-        x: 139
-        y: 78
-        width: 30
-        height: 38
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 139ae48d821689a4493d4f30524444d3
-      internalID: 516235684
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cogumelo Verde_6
-      rect:
-        serializedVersion: 2
-        x: 11
-        y: 14
-        width: 30
-        height: 38
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 185d3925f92046840a451cd93be86479
-      internalID: -1221868303
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cogumelo Verde_7
-      rect:
-        serializedVersion: 2
-        x: 75
-        y: 14
-        width: 30
-        height: 38
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a2da8f2f4ce638241b4caa5645903738
-      internalID: -1600441017
+      spriteID: 2d82589d9a4d15a4694448163dccc9cd
+      internalID: 399947822
       vertices: []
       indices: 
       edges: []
@@ -301,14 +330,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cogumelo Verde_0: 948355412
-      Cogumelo Verde_1: -720767681
-      Cogumelo Verde_2: 426423748
-      Cogumelo Verde_3: 1465527976
-      Cogumelo Verde_4: -20935056
-      Cogumelo Verde_5: 516235684
-      Cogumelo Verde_6: -1221868303
-      Cogumelo Verde_7: -1600441017
+      Ataque do Principe (1)_0: 1555728837
+      Ataque do Principe (1)_1: -965504735
+      Ataque do Principe (1)_2: -495930946
+      Ataque do Principe (1)_3: 524555638
+      Ataque do Principe (1)_4: 1109036164
+      Ataque do Principe (1)_5: 1428531761
+      Ataque do Principe (1)_6: -417380207
+      Ataque do Principe (1)_7: 727820550
+      Ataque do Principe (1)_8: -1389040665
+      Ataque do Principe (1)_9: 399947822
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
