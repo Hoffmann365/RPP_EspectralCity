@@ -19,6 +19,8 @@ public class CogumeloPatrol : MonoBehaviour
     private Animator anim;
     private BoxCollider2D coll;
     
+    private Transform player;
+    
     private void OnEnable()
     {
         GameObserver.DamageOnCogumelo += Damage;
@@ -34,7 +36,7 @@ public class CogumeloPatrol : MonoBehaviour
         rig = GetComponent<Rigidbody2D>();
         coll = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
-        
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         // Define os pontos de patrulha baseados na posição inicial
         pointA = transform.position - Vector3.right * (patrolDistance / 2);
         pointB = transform.position + Vector3.right * (patrolDistance / 2);
@@ -54,6 +56,8 @@ public class CogumeloPatrol : MonoBehaviour
         anim.SetInteger("transition", 1);
         // Move o inimigo na direção do alvo
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+        
+        float direction = targetPosition.x - transform.position.x;
 
         // Verifica se chegou ao alvo
         if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
@@ -62,16 +66,19 @@ public class CogumeloPatrol : MonoBehaviour
             targetPosition = targetPosition == pointA ? pointB : pointA;
 
             // Inverte o inimigo para olhar na direção correta
-            Flip();
+            Flip(direction);
         }
     }
 
-    private void Flip()
+    private void Flip(float direction)
     {
-        // Inverte o eixo X do inimigo para simular a mudança de direção
-        Vector3 localScale = transform.localScale;
-        localScale.x *= -1;
-        transform.localScale = localScale;
+        // Ajusta o lado do inimigo com base na direção (1 para direita, -1 para esquerda)
+        if (direction > 0 && transform.localScale.x < 0 || direction < 0 && transform.localScale.x > 0)
+        {
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1; // Inverte o eixo X
+            transform.localScale = localScale;
+        }
     }
 
     public void Damage(int dmg)
@@ -79,18 +86,6 @@ public class CogumeloPatrol : MonoBehaviour
         health -= dmg;
         anim.SetTrigger("hit");
         //som de hit
-        if (transform.eulerAngles.y == 0)
-        {
-            float knockbackDirection = transform.eulerAngles.y == 0 ? -1 : 1;
-            transform.position += new Vector3(0.5f * knockbackDirection, 0, 0);
-        }
-
-        if (transform.eulerAngles.y == 180)
-        {
-            float knockbackDirection = transform.eulerAngles.y == 0 ? -1 : 1;
-            transform.position += new Vector3(0.5f * knockbackDirection, 0, 0);
-        }
-        
         
         if (health <= 0)
         {

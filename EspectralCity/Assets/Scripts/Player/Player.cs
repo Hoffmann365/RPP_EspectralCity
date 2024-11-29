@@ -56,6 +56,12 @@ public class Player : MonoBehaviour
             CollectablesObserver.OnAddKeysEvent();
             Destroy(collision.gameObject); // Remove a chave do jogo
         }
+
+        if (collision.CompareTag("Fall"))
+        {
+            rig.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionY;
+            Damage(100);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D feet)

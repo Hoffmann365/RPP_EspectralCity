@@ -22,7 +22,7 @@ public class PlayerShot : MonoBehaviour
         Destroy(gameObject, 2f);
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         ShadowAI shadow = other.gameObject.GetComponent<ShadowAI>();
         CogumeloPatrol cog = other.gameObject.GetComponent<CogumeloPatrol>();
@@ -50,7 +50,8 @@ public class PlayerShot : MonoBehaviour
             pcog.Damage(bulletDmg);
             Destroy(gameObject);
         }
-        else
+
+        if (other.gameObject.layer == 8)
         {
             Destroy(gameObject);
         }
