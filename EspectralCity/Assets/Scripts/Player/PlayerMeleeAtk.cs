@@ -17,12 +17,18 @@ public class PlayerMeleeAtk : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         ShadowAI shadow = other.gameObject.GetComponent<ShadowAI>();
+        BatAI bat = other.gameObject.GetComponent<BatAI>();
         CogumeloPatrol cog = other.gameObject.GetComponent<CogumeloPatrol>();
         SkeletonEnemy skeleton = other.gameObject.GetComponent<SkeletonEnemy>();
         CogumeloBoss pcog = other.gameObject.GetComponent<CogumeloBoss>();
+        IceBoss ice = other.gameObject.GetComponent<IceBoss>();
         if (shadow != null)
         {
             shadow.Damage(MeleeAtkDmg);
+        }
+        if (bat != null)
+        {
+            bat.Damage(MeleeAtkDmg);
         }
         if (cog != null)
         {
@@ -37,6 +43,11 @@ public class PlayerMeleeAtk : MonoBehaviour
         if (pcog != null)
         {
             pcog.Damage(MeleeAtkDmg);
+        }
+
+        if (ice != null)
+        {
+            ice.Damage(MeleeAtkDmg);
         }
     }
 

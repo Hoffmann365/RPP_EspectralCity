@@ -23,14 +23,14 @@ public class ShadowAI : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rig;
     private SpriteRenderer shadowSR;
-    private CircleCollider2D coll;
+    private BoxCollider2D coll;
     public CircleCollider2D AtkColl;
     
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        coll = GetComponent<CircleCollider2D>();
+        coll = GetComponent<BoxCollider2D>();
         anim = GetComponent<Animator>();
         shadowSR = GetComponent<SpriteRenderer>();
         rig = GetComponent<Rigidbody2D>();

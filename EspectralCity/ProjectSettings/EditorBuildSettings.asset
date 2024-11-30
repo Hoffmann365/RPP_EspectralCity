@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/Fase 2 - Caverna G\xE9lida.unity"
     guid: 0ed60a70e48ed074190e9f860cb5e6f3
+  - enabled: 1
+    path: Assets/Scenes/Fase 3 - Cidade Espectral.unity
+    guid: fae4fa99cfbdefa41bfea0be6ee7c6f0
   m_configObjects: {}

@@ -25,12 +25,19 @@ public class PlayerShot : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         ShadowAI shadow = other.gameObject.GetComponent<ShadowAI>();
+        BatAI bat = other.gameObject.GetComponent<BatAI>();
         CogumeloPatrol cog = other.gameObject.GetComponent<CogumeloPatrol>();
         SkeletonEnemy skeleton = other.gameObject.GetComponent<SkeletonEnemy>();
         CogumeloBoss pcog = other.gameObject.GetComponent<CogumeloBoss>();
+        IceBoss ice = other.gameObject.GetComponent<IceBoss>();
         if (shadow != null)
         {
             shadow.Damage(bulletDmg);
+            Destroy(gameObject);
+        }
+        if (bat != null)
+        {
+            bat.Damage(bulletDmg);
             Destroy(gameObject);
         }
         if (cog != null)
@@ -48,6 +55,12 @@ public class PlayerShot : MonoBehaviour
         if (pcog != null)
         {
             pcog.Damage(bulletDmg);
+            Destroy(gameObject);
+        }
+
+        if (ice != null)
+        {
+            ice.Damage(bulletDmg);
             Destroy(gameObject);
         }
 
